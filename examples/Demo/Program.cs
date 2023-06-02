@@ -14,7 +14,7 @@ namespace Demo
         static void Main(string[] args)
         {
             const string filename = "test.docx";
-            string html = ResourceHelper.GetString("Resources.CompleteRunTest.html");
+            string html = System.IO.File.ReadAllText("c:\\temp\\test.html");// ResourceHelper.GetString("Resources.CompleteRunTest.html");
             if (File.Exists(filename)) File.Delete(filename);
 
             using (MemoryStream generatedDocument = new MemoryStream())
